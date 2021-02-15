@@ -9,9 +9,11 @@ class Plinko {
     }
     display() {
       push();
+      ellipseMode(RADIUS);
       var pos = this.body.position;
       translate(pos.x, pos.y);
       rotate(this.body.angle);
+      ellipse(pos.x, pos.y, this.radius, this.radius);
       pop();
     }
   };

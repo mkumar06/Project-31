@@ -1,9 +1,9 @@
 class Plinko {
     constructor(x, y) {
       var options = {
-          isStatic: false
+          isStatic: true
       }
-      this.body = Bodies.circle(x, y, 15, options);
+      this.body = Bodies.circle(x, y, 10, options);
       this.radius = 10;
       World.add(world, this.body);
     }
@@ -13,7 +13,7 @@ class Plinko {
       var pos = this.body.position;
       translate(pos.x, pos.y);
       rotate(this.body.angle);
-      ellipse(pos.x, pos.y, this.radius, this.radius);
+      ellipse(0, 0, this.radius, this.radius);
       pop();
     }
   };
